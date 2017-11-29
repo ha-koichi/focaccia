@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-const API = process.env.NODE_API_URL;
-// const API = 'http://127.0.0.1:5000/';
+const API = process.env.REACT_APP_API_URL;
 
 export default class List extends Component {
   constructor(props) {
@@ -19,7 +18,6 @@ export default class List extends Component {
 
   render() {
     const { titles } = this.state;
-    console.log(API);
     return (
       <div>
         {titles.map(title =>
